@@ -2,8 +2,18 @@ body {
   background-image:    url(wallpaper.jpg);
   background-size:     cover;
   background-repeat:   no-repeat;
+  font-family: Tahoma, Geneva, sans-serif;
   padding: 50px;
   font-family: Tahoma, Geneva, sans-serif
+}
+
+#moonForm {
+  width: 600px;
+  text-align: right;
+}
+
+h1 {
+  text-align: center;
 }
 
 a {
