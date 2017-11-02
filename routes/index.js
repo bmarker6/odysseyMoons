@@ -12,7 +12,7 @@ router.get('/moons', function(req, res) {
 
 router.post('/moons', function(req, res) {
   moonsArray.push(req.body);
-  res.sendStatus(200);
+  res.json(moonsArray);
 }
 
 module.exports = router;
