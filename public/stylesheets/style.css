@@ -4,6 +4,15 @@ body {
   background-repeat:   no-repeat;
 }
 
+#moonForm {
+  width: 600px;
+  text-align: right;
+}
+
+h1 {
+  text-align: center;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
