@@ -3,7 +3,7 @@ var router = express.Router();
 var moonsArray = [];
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index.html', { root: 'public' });
+    res.sendFile('index.html', { root:  'public' });
 });
 
 router.get('/moons', function(req, res) {
@@ -13,6 +13,6 @@ router.get('/moons', function(req, res) {
 router.post('/moons', function(req, res) {
   moonsArray.push(req.body);
   res.json(moonsArray);
-}
+})
 
 module.exports = router;
