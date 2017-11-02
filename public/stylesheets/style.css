@@ -2,6 +2,7 @@ body {
   background-image:    url(wallpaper.jpg);
   background-size:     cover;
   background-repeat:   no-repeat;
+  font-family: Tahoma, Geneva, sans-serif
 }
 
 #moonForm {
@@ -29,4 +30,12 @@ th {
 table {
   overflow-y: scroll;
   width: 100%;
+}
+
+#moonResults {
+  background:rgba(255,255,255,0.5);
+}
+
+input {
+  padding-bottom: 1rem;
 }
