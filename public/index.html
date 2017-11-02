@@ -13,6 +13,37 @@
 
 
     <script>
+        function displayMoons(moonsJson) {
+          var moonsData = moonsJson.map(function(moon) {
+            return '<tr>' +
+              '<td>' + moon.location '</td>' +
+              '<td>' + moon.number '</td>' +
+              '<td>' + moon.description '</td>' +
+              + '</tr>'
+          });
+          
+          moonsHtml = '<table><th>' +
+            '<td>' + Location + '</td>' +
+            '<td>' + Number + '</td>' +
+            '<td>' + Description + '</td></th>' +
+            moonsData + '</table>';
+          
+          $('#moonResults').html(moonsHtml);
+            
+        }
+      
+      function getMoons() {
+        $.ajax({
+            type: "GET",
+            url: moonurl,
+            dataType: "json",
+            success: function (parsed_json) {
+              console.log(parsed_json);
+              displayMoons(parsed_json);
+            }
+        });
+        
+      }
         $(document).ready(function() {
             $("#moonButton").click(function (e) {
                 var location = $("#moonLocation").val();
@@ -37,10 +68,13 @@
                     dataType: "json",
                     success: function (parsed_json) {
                         console.log(parsed_json);
+                      displayMoons(parsed_json);
                     }
                 });
 
             });
+          
+          getMoons();
         });
     </script>
 
@@ -57,4 +91,4 @@
 <div id="moonResults"></div>
 
 </body>
-</html></html>
+</html>
