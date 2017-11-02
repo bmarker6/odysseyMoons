@@ -2,12 +2,8 @@ body {
   background-image:    url(wallpaper.jpg);
   background-size:     cover;
   background-repeat:   no-repeat;
-  font-family: Tahoma, Geneva, sans-serif
-}
-
-body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: Tahoma, Geneva, sans-serif
 }
 
 a {
@@ -19,14 +15,14 @@ th {
 }
 
 table {
-  overflow-y: scroll;
   width: 100%;
 }
 
 #moonResults {
-  background:rgba(255,255,255,0.5);
+  background:rgba(255,255,255,0.8);
+  overflow-y: auto;
 }
 
 input {
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
 }
