@@ -12,3 +12,12 @@ body {
 a {
   color: #00B7FF;
 }
+
+th {
+  text-align: left;
+}
+
+table {
+  overflow-y: scroll;
+  width: 100%;
+}
