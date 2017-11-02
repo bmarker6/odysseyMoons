@@ -16,6 +16,7 @@
         function displayMoons(moonsJson) {
           var moonsData = moonsJson.map(function(moon) {
             return '<tr>' +
+                '<td>'+ '<img src="stylesheets/moon.png" height="50" width="50">' +'</td>' +
               '<td>' + moon.location + '</td>' +
               '<td>' + moon.number + '</td>' +
               '<td>' + moon.description + '</td>' +
