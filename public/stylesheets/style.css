@@ -4,7 +4,6 @@ body {
   background-repeat:   no-repeat;
   font-family: Tahoma, Geneva, sans-serif;
   padding: 50px;
-  overflow-y: auto;
 }
 
 #moonForm {
@@ -31,6 +30,8 @@ table {
 }
 
 #moonResults {
+  height: 300px;
+  overflow-y: scroll;
   background:rgba(255,255,255,0.8);
 }
 
