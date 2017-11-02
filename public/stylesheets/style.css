@@ -30,7 +30,7 @@ table {
 }
 
 #moonResults {
-  height: 18rem;
+  height: 500px;
   overflow-y: scroll;
   background:rgba(255,255,255,0.8);
 }
