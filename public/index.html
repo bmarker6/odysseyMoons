@@ -3,6 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Super Mario Odyssey Moon Finder</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+
+    <script
+            src="http://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous">
+    </script>
+
+
+    <script>
+        $(document).ready(function() {
+            $("#moonButton").click(function (e) {
+                var location = $("#moonLocation").val();
+                var number = $("#moonNumber").val();
+                var description = $("#moonDescription").val();
+
+                e.preventDefault();
+
+                var moonurl = "/moons";
+                var moonJson = {
+                    "location" : location,
+                    "number" : number,
+                    "description" : description
+
+                };
+
+
+                $.ajax({
+                    type: "POST",
+                    url: moonurl,
+                    data: data,
+                    dataType: "json",
+                    success: function (parsed_json) {
+                        console.log(parsed_json);
+                    }
+                });
+
+            });
+        });
+    </script>
+
 </head>
 <body>
 
@@ -12,6 +53,8 @@
     Enter a Description: <input type="text" id="moonDescription" value=""><br>
     <input id="moonButton" type="submit" value="Submit">
 </form>
+
+<div id="moonResults"></div>
 
 </body>
 </html></html>
